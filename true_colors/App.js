@@ -1,98 +1,13 @@
-// //import React from 'react';
-// //import { StyleSheet, Text, View } from 'react-native';
-// //
-// // export default function App() {
-// //   return (
-// //     <View style={styles.container}>
-// //       <Text>Hello Cole</Text>
-// //     </View>
-// //   );
-// // }
-// //
-// // const styles = StyleSheet.create({
-// //   container: {
-// //     flex: 1,
-// //     backgroundColor: '#fff',
-// //     alignItems: 'center',
-// //     justifyContent: 'center',
-// //   },
-// // });
-// import * as React from 'react';
-// import { Image, ScrollView, Modal, Text, View, StyleSheet, Button, TouchableHighlight } from 'react-native';
-// import Constants from 'expo-constants';
-// import * as Permissions from 'expo-permissions';
-// import Navigation  from './Navigation';
-//
-// import { BarCodeScanner } from 'expo-barcode-scanner';
-//
-// export default class BarcodeScannerExample extends React.Component {
-//   state = {
-//     hasCameraPermission: null,
-//     scanned: false,
-//   };
-//
-//   async componentDidMount() {
-//     this.getPermissionsAsync();
-//   }
-//
-//   getPermissionsAsync = async () => {
-//     const { status } = await Permissions.askAsync(Permissions.CAMERA);
-//     this.setState({ hasCameraPermission: status === 'granted' });
-//   };
-//
-//   render() {
-//     const { hasCameraPermission, scanned } = this.state;
-//
-//     if (hasCameraPermission === null) {
-//       return <Text>Requesting for camera permission</Text>;
-//     }
-//     if (hasCameraPermission === false) {
-//       return <Text>No access to camera</Text>;
-//     }
-//     return (
-//       <View style={{flex:1}}>
-//         <Navigation />
-//       </View>
-//       // <View
-//       //   style={{
-//       //     flex: 1,
-//       //     flexDirection: 'column',
-//       //     justifyContent: 'flex-end',
-//       //   }}>
-//       //   <BarCodeScanner
-//       //     onBarCodeScanned={scanned ? undefined : this.handleBarCodeScanned}
-//       //     style={StyleSheet.absoluteFillObject}
-//       //   />
-//       //
-//       //   {scanned && (
-//       //     <Button title={'Tap to Scan Again'} onPress={() => this.setState({ scanned: false })} />
-//       //   )}
-//       // </View>
-//     );
-//   }
-//
-//   handleBarCodeScanned = ({ type, data }) => {
-//     this.setState({ scanned: true });
-//     if (type == 512) {
-//       alert(`First Keven ${type} and data ${data} has been scanned!`);
-//     }
-//     else {
-//       alert(`Second ${type} and data ${data} has been scanned!`);
-//     }
-//   };
-// }
+
 import * as React from 'react';
-// import { Button, View, Text } from 'react-native';
 import { createAppContainer } from 'react-navigation';
 import { createStackNavigator } from 'react-navigation-stack';
-
-// import * as React from 'react';
 import { Image, ScrollView, Modal, Text, View, StyleSheet, Button, TouchableHighlight } from 'react-native';
 import Constants from 'expo-constants';
 import * as Permissions from 'expo-permissions';
-// import Navigation  from './Navigation';
 import { BarCodeScanner } from 'expo-barcode-scanner';
 
+//Global
 var result = {};
 
 class HomeScreen extends React.Component {
@@ -177,8 +92,6 @@ class OreoPage extends React.Component {
     );
   }
 }
-
-
 
 class BarcodeScannerExample extends React.Component {
   state = {
