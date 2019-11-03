@@ -14,6 +14,7 @@ class HomeScreen extends React.Component {
   render() {
     return (
       <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
+        <Image style={{ width: 100, height: 100 }} source={require('./assets/logo.jpg')} />
         <Text style={text_styles.titleText}>Welcome to True Colors!    </Text>
         <Button
           title="Scann"
