@@ -15,8 +15,13 @@
     "react-native": "https://github.com/expo/react-native/archive/sdk-35.0.0.tar.gz",
     "react-native-gesture-handler": "^1.5.0",
     "react-native-web": "^0.11.7",
+<<<<<<< HEAD
     "react-navigation": "^4.0.10",
     "react-navigation-stack": "^1.10.3"
+=======
+    "expo-barcode-scanner": "~7.0.0",
+    "expo-sqlite": "~7.0.0"
+>>>>>>> 490202023e9f547448d289ba6438934581a5888b
   },
   "devDependencies": {
     "babel-preset-expo": "^7.1.0"
