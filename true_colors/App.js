@@ -46,6 +46,7 @@ class RedBullPage extends React.Component {
   render() {
     return (
       <View style = { red_styles.container }>
+      <Image style={{ width: 100, height: 100 }} source={require('./assets/red.png')} />
         <Text style={text_styles.titleText}>Red Bull GmbH    </Text>
         <Text style={text_styles.titleText}>Environmental Score: 1/5    </Text>
         <Text style={text_styles.titleText}>Country of Origin: Austria   </Text>
@@ -63,6 +64,7 @@ class FishPage extends React.Component {
   render() {
     return (
       <View style={ yellow_styles.container }>
+      <Image style={{ width: 100, height: 100 }} source={require('./assets/yellow.png')} />
         <Text style={text_styles.titleText}>Nabisco  </Text>
         <Text style={text_styles.titleText}>Environmental Score: 3/5    </Text>
         <Text style={text_styles.titleText}>Country of Origin: USA   </Text>
@@ -80,6 +82,7 @@ class OreoPage extends React.Component {
   render() {
     return (
       <View style={ green_styles.container }>
+        <Image style={{ width: 100, height: 100 }} source={require('./assets/green_mark.jpg')} />
         <Text style={text_styles.titleText}>Campbell Soup Company      </Text>
         <Text style={text_styles.titleText}>Environmental Score: 5/5     </Text>
         <Text style={text_styles.titleText}>Country of Origin: USA      </Text>
@@ -185,7 +188,8 @@ const red_styles = StyleSheet.create(
     container:
     {
         flex: 1,
-        backgroundColor: '#ff0000',
+        // backgroundColor: '#ff0000',
+        backgroundColor: '#ffffff',
         alignItems: 'center',
         justifyContent: 'center',
         color: 'white'
@@ -197,7 +201,8 @@ const yellow_styles = StyleSheet.create(
     container:
     {
         flex: 1,
-        backgroundColor: '#ffff00',
+        // backgroundColor: '#ffff00',
+        backgroundColor: '#ffffff',
         alignItems: 'center',
         justifyContent: 'center',
         color: 'white'
@@ -209,7 +214,8 @@ const green_styles = StyleSheet.create(
     container:
     {
         flex: 1,
-        backgroundColor: '#00ff00',
+        // backgroundColor: '#00ff00',
+        backgroundColor: '#ffffff',
         alignItems: 'center',
         justifyContent: 'center',
         color: 'white'
