@@ -21,6 +21,7 @@ import * as React from 'react';
 import { Text, View, StyleSheet, Button } from 'react-native';
 import Constants from 'expo-constants';
 import * as Permissions from 'expo-permissions';
+import * as SQLite from 'expo-sqlite';
 
 import { BarCodeScanner } from 'expo-barcode-scanner';
 
@@ -69,6 +70,20 @@ export default class BarcodeScannerExample extends React.Component {
 
   handleBarCodeScanned = ({ type, data }) => {
     this.setState({ scanned: true });
-    alert(`Bar code with type ${type} and data ${data} has been scanned!`);
+    //alert(`Bar code with type ${type} and data ${data} has been scanned!`);
+    var result = getData(data);
+    alert("Company: " + result[0] + ", ESG Score: " + result[2] + ", Country: " + result[3])
   };
 }
+  function getData(n){
+    var data = [['Nabisco', 44000020170, 3, 'USA'],
+                ['Red Bull GmbH', 611269991000, 1, 'AUT'],
+                ['Campbell Soup Company', 14100075233, 5, 'USA']];
+                for(var i = 0; i < data.length; i++){
+                  if (data[i][1] == n) {
+                    return data[i];
+                  }
+
+                }
+                return -1;
+  }
